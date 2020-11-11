@@ -3,7 +3,9 @@ Attempt to fail infra with only null provider in a same way as in Galser/tfe-fai
 
 # Reproducing
 
-### 1. Create following code : 
+### 1. Create code : 
+
+Create a code that looks like : 
 
 ```terraform
 resource "random_pet" "pet" {
@@ -22,6 +24,7 @@ resource "null_resource" "non-timed-hello" {
 
 ### 2. Plan & Execute in TFE or TFC
 
+Create resources by queuing the run in TFE or TFC
 ```bash
 Terraform will perform the following actions:
 
@@ -119,7 +122,13 @@ Failed to instantiate provider "registry.terraform.io/hashicorp/null" to
 obtain schema: unknown provider "registry.terraform.io/hashicorp/null"
 ```
 
-Boom. It had failed.
+Boom. It had failed. With both TF versions 0.13.15 and 0.12.29 specified on workspace.
+
+## How about TF OSS ?
+
+The very same sequence of changes - not failign in TF OSS or with `local` runs in TF CLI initiated workspaces - well, probably because we have provides schemas and providers locally in `.terraform` folder.
+
+
 
 # TODO
 
