@@ -3,5 +3,5 @@ Attempt to fail infra with only null provider in a same way as in Galser/tfe-fai
 
 # TODO
 
-- [ ] initial code
-- [ ] test removal
+- [x] initial code
+- [x] test removal
