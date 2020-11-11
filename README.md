@@ -1,5 +1,5 @@
 # nulll-provider-remove-and-fail-test
-Attempt to fail infra with only null provider in a same way as in Galser/tfe-fail-after-infra-change
+Attempt to fail infra with the only null provider in the same way as in Galser/tfe-fail-after-infra-change
 
 # Reproducing
 
@@ -126,7 +126,7 @@ Boom. It had failed. With both TF versions 0.13.15 and 0.12.29 specified on work
 
 ## How about TF OSS ?
 
-The very same sequence of changes - not failign in TF OSS or with `local` runs in TF CLI initiated workspaces - well, probably because we have provides schemas and providers locally in `.terraform` folder.
+The very same sequence of changes - not failing in TF OSS or with `local` runs in TF CLI initiated workspaces - well, probably because we have provides schemas and providers locally in `.terraform` folder.
 
 
 
